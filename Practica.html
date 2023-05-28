@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    HOLA ESTO ES UNA PRACTICA 
+    LO PRIMERO SON LOS VECTORES
+    <input type="text" id="valor" placeholder="Escriba un valor">
+    <button id="boton_enviar" onclick="calcular()">ENVIAR</button>
+    <h1 id="titulo"></h1>
+    <script>
+    
+const nameuno = "CUALQUIER COSA";
+var name_dos = "CUALQUIER COSA";
+let nameTres = "CUALQUIER COSA";
+
+
+let num_a= 5;
+let num_b= 10.2;
+let boolean = false;
+let stringvar = "Hola";
+let arraynum = [1,2,3,4,5,"6","7","8"]; 
+let dias_semana = ["Lunes","Martes","Miercoles","Jueves","Viernes"];
+let users = [
+    {name:"Jesus", last_name:"Ojeda", age:19},
+    {name:"Jose", last_name:"Barragan", age:21},
+    {name:"Cristiano", last_name:"Messi", age:34}
+]
+for(let i=0; i < users.length;i++){
+    console.log(users[i].age)
+ }
+let i = 0;
+        while(i<users.length){
+            console.log(users[i].last_name)
+            i++   
+        }
+for(let i=0; i < users.length;i++){
+        console.log(users[i].name)
+        }
+
+        function calcular () {
+            let namevar = document.getElementById("valor").value;
+            namevar = namevar.toUpperCase();
+            document.getElementById("titulo").innerText = namevar;
+        }
+        document.getElementById("boton_enviar").addEventListener("click",function(){
+            document.getElementById("titulo").style.color = "red";
+            document.getElementById("titulo").style.backgroundColor = "aqua";
+        })
+    </script>
+
+</body>
+</html>
